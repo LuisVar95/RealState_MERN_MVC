@@ -1,0 +1,28 @@
+/**Base**/
+@use './scss/base/globales';
+@use './scss/base/mixins';
+@use './scss/base/normalize';
+@use './scss/base/tipografia';
+@use './scss/base/variables';
+
+/**UI**/
+@use './scss/ui/contenido/destacada';
+@use './scss/ui/contenido/propiedades';
+@use './scss/ui/contenido/testimonial-blog';
+@use './scss/ui/contenido/nosotros';
+@use './scss/ui/contenido/contacto';
+
+/**UI FOOTER**/
+@use './scss/ui/footer/footer';
+
+/**UI HEADER**/
+@use './scss/ui/header/header';
+
+/** Admin **/
+@use './scss/admin/header-admin';
+@use './scss/admin/login';
+@use './scss/admin/administracion';
+@use './scss/admin/formulario-propiedad';
+@use './scss/admin/alerta';
+@use './scss/admin/mensajes';
+@use './scss/admin/mensaje';

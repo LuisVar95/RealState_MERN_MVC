@@ -1,0 +1,65 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.titulo-mensajes {
+    margin-top: v.$separacion;
+    text-align: center;
+}
+
+.mensajes {
+    margin-top: v.$separacion;
+    background-color: v.$blanco;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+
+    &__campo {
+        display: flex;
+        justify-content: space-between;
+        padding: 4rem 4rem 4rem 0;
+        border: 1px solid v.$gris;
+        border-bottom: none;
+        transition-property: background-color;
+        transition-duration: .3s;
+        align-items: center;
+
+        &:hover {
+            background-color: darken($color: v.$grisClaro, $amount: 5%)
+        }
+
+        span {
+            color: v.$rojo;
+            margin-left: 1rem;
+        }
+    }
+
+    &:last-of-type {
+        border-bottom: 1px solid v.$gris;
+    }
+
+    &__texto {
+        font-weight: bold;
+        font-size: 1.5rem;
+
+        &:first-of-type {
+            margin-left: 2rem;
+        }
+    }
+
+    &__boton {
+        margin-right: 2rem;
+        padding: .8rem 4rem .8rem 4rem;
+        border: none;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: v.$blanco;
+        background-color: darken($color: v.$rojo, $amount: 10);
+        transition-property: background-color;
+        transition-duration: .3s;
+
+        &:hover {
+            cursor: pointer;
+            background-color: darken($color: v.$rojo, $amount: 20);
+        }
+    }
+
+    
+}

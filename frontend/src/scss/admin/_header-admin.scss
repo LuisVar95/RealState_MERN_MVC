@@ -1,0 +1,32 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.headerAdmin {
+    padding: 3rem 0 3rem 6rem;
+    background-color: v.$primario;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__logo {
+        width: 25rem;
+    }
+
+    &__boton {
+        margin-right: calc(v.$separacion * 2);
+        background-color: v.$verde;
+        padding: 1rem 3rem;
+        color: v.$blanco;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-radius: .3rem;
+        border: none;
+        transition-property: background-color;
+        transition-duration: .3s;
+
+        &:hover{
+            background-color: darken($color: v.$verde, $amount: 7%);
+            cursor: pointer;
+        }
+    }
+}

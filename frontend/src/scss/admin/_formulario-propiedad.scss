@@ -1,0 +1,95 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.nueva-propiedad {
+    margin-top: 7rem;
+
+    &__titulo {
+        text-align: center;
+        font-size: 4rem;
+        padding-bottom: 1rem; // Espaciado para mejorar la estética
+        margin-bottom: 5rem; // Espaciado adicional hacia abajo
+
+        span {
+            color: v.$primario;
+        }
+    }
+}
+
+.propiedadForm {
+    max-width: 900px; /* Aumenté el ancho máximo del formulario */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+
+    &__campo {
+        margin-bottom: 24px;
+    }
+
+    &__label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    &__input,
+    &__textarea {
+        width: 100%;
+        padding: 16px; /* Ajusté el padding de los elementos de entrada */
+        box-sizing: border-box;
+        border: 1px solid #ddd;
+        border-radius: 8px; /* Aumenté el radio de las esquinas redondeadas */
+        font-size: 18px; /* Aumenté el tamaño de fuente */
+        transition: border-color 0.3s;
+    }
+
+    &__input {
+        &:hover,
+        &:focus {
+            border-color: #4caf50;
+        }
+    }
+
+    &__textarea {
+        resize: vertical;
+        min-height: 15rem;
+
+        &:hover,
+        &:focus {
+            border-color: #4caf50;
+        }
+    }
+
+    &__submit {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 18px 24px; /* Ajusté el padding del botón */
+        border: none;
+        cursor: pointer;
+        border-radius: 8px;
+        font-size: 20px; /* Aumenté el tamaño de fuente del botón */
+
+        &:hover {
+            background-color: #45a049;
+        }
+    }
+}
+
+.volver {
+
+    &__boton {
+        border: none;
+        background-color: #f44336;
+        padding: 1rem;
+        border-radius: 4px;
+        color: v.$blanco;
+        font-weight: bold;
+        text-transform: uppercase;
+
+            &:hover{
+                background-color: darken($color: #f44336, $amount: 5%);
+            }
+    }
+}
+  

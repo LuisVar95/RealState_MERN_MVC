@@ -1,0 +1,19 @@
+@use '../base/variables' as v;
+
+.alerta__roja, .alerta__verde {
+    background-color: #FF0000;
+    text-align: center;
+    padding: 1.5rem;
+    font-weight: bold;
+    color: v.$blanco; /* Asumo que v.$blanco es una variable que define el color blanco */
+    font-size: 1.8rem;
+    margin-bottom: 2rem; /* Reduje el margen para que se vea más compacto */
+    text-transform: uppercase;
+    border-radius: 8px; /* Agregué esquinas redondeadas para un aspecto más suave */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Agregué una ligera sombra para resaltar */
+}
+
+.alerta__verde {
+    background-color: #45a049;
+    box-shadow: 0 0 10px rgba(0, 128, 0, 0.2);
+}

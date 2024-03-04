@@ -1,0 +1,59 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.login {
+    margin-top: 5rem;
+
+    h1 {
+        text-align: center;
+        font-size: 5rem;
+        border-bottom: 2px solid v.$primario; // Línea decorativa debajo del título
+        padding-bottom: 1rem; // Espaciado para mejorar la estética
+        margin-bottom: 2rem; // Espaciado adicional hacia abajo
+    }
+    h2 {
+        margin-top: 1rem;
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+
+    &__formulario {
+        margin-top: 5rem;
+        width: 100%;
+    }
+    
+    &__campo {
+        display: flex;
+        margin-bottom: 2rem;
+        align-items: center;
+        label {
+            flex: 0 0 10rem;
+        }
+        input {
+            flex: 1;
+            border: 2px solid v.$gris; // Borde alrededor del campo
+            padding: 1.5rem;
+            border-radius: 1rem;
+            transition: border-color 0.3s;
+
+            &:focus {
+                border-color: v.$primario;
+            }
+        }
+    }
+    &__boton {
+        background-color: v.$primario;
+        border: none;
+        padding: 1rem;
+        color: v.$blanco;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-top: 2.5rem;
+        cursor: pointer; // Indicador de que el botón es interactivo
+
+        &:hover {
+            background-color: darken(v.$primario, 7%);
+        }
+    }
+}

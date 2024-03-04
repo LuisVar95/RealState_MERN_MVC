@@ -1,0 +1,33 @@
+@use '../../base/variables' as v;
+@use '../../base//mixins' as m;
+
+
+.nosotros {
+    margin: v.$separacion 0 0 0;
+
+    &__heading {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        margin-bottom:  v.$separacion;
+        @include m.heading(true);
+    }
+
+    &__flex {
+        display: flex;
+        flex-direction: column;
+    
+        @include m.tablet {
+            flex-direction: row;
+        }
+    
+        img {
+            max-width: 60rem;
+            max-height: 60rem;
+        }
+    }
+    &__contenido {
+        padding: 1.5rem;
+    }
+}
