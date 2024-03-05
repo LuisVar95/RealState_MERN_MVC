@@ -64,7 +64,7 @@ const AdminProvider = ({children}) => {
         const obtenerPropiedadesPublic = async () => {
             try {
                 const { data } = await clienteAxios('/propiedades')
-                setPropiedadesPublic(data.slice(0, 6))
+                setPropiedadesPublic(data)
             } catch (error) {
                 console.log(error)
             }
@@ -297,7 +297,7 @@ const AdminProvider = ({children}) => {
         const obtenerEntradasPublic = async () => {
             try {
                 const {data} = await clienteAxios('/blog')
-                setEntradasPublic(data.slice(0, 3))
+                setEntradasPublic(data)
             } catch (error) {
                 console.log(error)
             }
